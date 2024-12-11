@@ -186,7 +186,7 @@
             }
 
             .header {
-                flex-direction: column;
+                flex-direction : column;
                 gap: 1rem;
             }
 

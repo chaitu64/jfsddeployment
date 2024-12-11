@@ -5,36 +5,43 @@
 <meta charset="UTF-8">
 <title>Admin Login</title>
 <style>
-    /* General body styles */
+    /* Global Styles */
     body {
-        background-image: linear-gradient(135deg, #4E2C2B 10%, #6F4F37 100%); /* Brown family colors */
+        background-color: #f5f5dc; /* Soft cream background */
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        font-family: "Open Sans", sans-serif;
-        color: #333333;
-        padding-top: 60px; 
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
     }
 
-    /* Navbar styles */
-    .navbar {git add origin "https://github.com/Adarsh-0411/JfsdSdp.git"
+    h1, h2 {
+        font-family: 'Merriweather', serif;
+        color: #333;
+    }
+
+    /* Navbar Styles */
+    .navbar {
         width: 100%;
-        background-color: #3E2723; /* Dark brown */
-        color: white;
+        background-color: #3e2723; /* Deep brown color */
+        color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
-        position: fixed; /* Fixed at the top */
+        padding: 20px 40px;
+        position: fixed;
         top: 0;
         left: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         z-index: 1000;
     }
 
     .navbar h1 {
+        font-size: 24px;
         margin: 0;
-        font-size: 20px;
     }
 
     .navbar ul {
@@ -51,73 +58,108 @@
 
     .navbar ul li a {
         text-decoration: none;
-        color: white;
-        font-size: 16px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
         transition: color 0.3s;
     }
 
     .navbar ul li a:hover {
-        color: #FF7043; /* Light brown */
+        color: #ff7043; /* Soft orange hover effect */
     }
 
-    /* Login container styles */
+    /* Login Container Styles */
     .login-container {
-        background-color: #fff;
-        padding: 20px 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        margin: 100px auto 0; /* Push it below the navbar */
+        background-color: #d8c8a7; /* Light brown background for the box */
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        margin: 100px auto;
     }
 
     .login-container h2 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         color: #6F4F37; /* Light brown color for the title */
+        font-size: 30px;
     }
 
     .form-group {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
 
     .form-group label {
         display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #333;
     }
 
     .form-group input {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fff;
+        transition: all 0.3s ease;
     }
 
     .form-group input:focus {
-        border-color: #6F4F37; /* Light brown for focus border */
+        border: 2px solid #ff7043; /* Soft orange focus border */
+        outline: none;
     }
 
     .btn {
-        display: block;
         width: 100%;
-        padding: 10px;
-        background-color: #6F4F37; /* Light brown */
-        color: #fff;
+        padding: 15px;
+        background-color: #6F4F37; /* Soft brown */
+        color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
+        font-size: 18px;
         cursor: pointer;
-        font-size: 16px;
-        margin-top: 10px;
+        transition: background-color 0.3s;
     }
 
     .btn:hover {
-        background-color: #4E2C2B; /* Darker brown for hover effect */
+        background-color: #ff7043; /* Soft orange on hover */
     }
 
     .error {
-        color: red;
+        color: #ff5a36; /* Red for errors */
         text-align: center;
+        font-size: 18px;
+        margin-top: 20px;
     }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 15px 20px;
+        }
+
+        .login-container {
+            width: 90%;
+            padding: 30px;
+        }
+
+        .navbar h1 {
+            font-size: 20px;
+        }
+
+        .navbar ul li a {
+            font-size: 16px;
+        }
+
+        .login-container h2 {
+            font-size: 26px;
+        }
+    }
+
 </style>
 </head>
 <body>

@@ -46,10 +46,18 @@
         td {
             background-color: #fff;
             font-size: 14px;
+            vertical-align: top;
         }
 
         tr:nth-child(even) td {
             background-color: #f9f9f9;
+        }
+
+        .time-slot {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            margin-bottom: 5px;
         }
 
         .actions {
@@ -88,7 +96,6 @@
             font-size: 14px;
             color: #777;
         }
-
     </style>
 </head>
 <body>
@@ -106,6 +113,111 @@
             </tr>
         </thead>
         <tbody id="timetableBody">
+            <tr>
+                <td>Monday</td>
+                <td>
+                    <div class="time-slot">Mathematics (MATH101)<br>Section: A<br>Room: R201</div>
+                </td>
+                <td>
+                    <div class="time-slot">Physics (PHYS101)<br>Section: B<br>Room: R202</div>
+                </td>
+                <td>
+                    <div class="time-slot">Computer Science (CS101)<br>Section: A<br>Room: R203</div>
+                </td>
+                <td>
+                    <div class="time-slot">English (ENG101)<br>Section: C<br>Room: R204</div>
+                </td>
+                <td>
+                    <div class="time-slot">Chemistry (CHEM101)<br>Section: B<br>Room: R205</div>
+                </td>
+                <td>
+                    <div class="time-slot">Biology (BIO101)<br>Section: A<br>Room: R206</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>
+                    <div class="time-slot">History (HIST101)<br>Section: C<br>Room: R207</div>
+                </td>
+                <td>
+                    <div class="time-slot">Geography (GEO101)<br>Section: B<br>Room: R208</div>
+                </td>
+                <td>
+                    <div class="time-slot">Mathematics (MATH102)<br>Section: A<br>Room: R209</div>
+                </td>
+                <td>
+                    <div class="time-slot">Physics (PHYS102)<br>Section: B<br>Room: R210</div>
+                </td>
+                <td>
+                    <div class="time-slot">Computer Science (CS102)<br>Section: A<br>Room: R201</div>
+                </td>
+                <td>
+                    <div class="time-slot">English (ENG102)<br>Section: C<br>Room: R202</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>
+                    <div class="time-slot">Biology (BIO102)<br>Section: A<br>Room: R203</div>
+                </td>
+                <td>
+                    <div class="time-slot">Chemistry (CHEM102)<br>Section: B<br>Room: R204</div>
+                </td>
+                <td>
+                    <div class="time-slot">Mathematics (MATH103)<br>Section: A<br>Room: R205</div>
+                </td>
+                <td>
+                    <div class="time-slot">Physics (PHYS103)<br>Section: B<br>Room: R206</div>
+                </td>
+                <td>
+                    <div class="time-slot">Computer Science (CS103)<br>Section: A<br>Room: R207</div>
+                </td>
+                <td>
+                    <div class="time-slot">English (ENG103)<br>Section: C<br>Room: R208</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>
+                    <div class="time-slot">History (HIST102)<br>Section: C<br>Room: R209</div>
+                </td>
+                <td>
+                    <div class="time-slot">Geography (GEO102)<br>Section: B<br>Room: R210</div>
+                </td>
+                <td>
+                    <div class="time-slot">Mathematics (MATH104)<br>Section: A<br>Room: R201</div>
+                </td>
+                <td>
+                    <div class="time-slot">Physics (PHYS104)<br>Section: B<br>Room: R202</div>
+                </td>
+                <td>
+                    <div class="time-slot">Computer Science (CS104)<br>Section: A<br>Room: R203</div>
+                </td>
+                <td>
+                    <div class="time-slot">English (ENG104)<br>Section: C<br>Room: R204</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>
+                    <div class="time-slot">Chemistry (CHEM105)<br>Section: B<br>Room: R205</div>
+                </td>
+                <td>
+                    <div class="time-slot">Biology (BIO105)<br>Section: A<br>Room: R206</div>
+                </td>
+                <td>
+                    <div class="time-slot">Mathematics (MATH105)<br>Section: A<br>Room: R207</div>
+                </td>
+                <td>
+                    <div class="time-slot">Physics (PHYS105)<br>Section: B<br>Room: R208</div>
+                </td>
+                <td>
+                    <div class="time-slot">Computer Science (CS105)<br>Section: A<br>Room: R209</div>
+                </td>
+                <td>
+                    <div class="time-slot">English (ENG105)<br>Section: C<br>Room: R210</div>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -114,61 +226,5 @@
         <button class="btn" onclick="window.location.href='/studenthome'">Return to Student Dashboard</button>
     </div>
 
-    <script>
-        const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-        const timetableBody = document.getElementById('timetableBody');
-
-        // Sample subjects data
-        const sampleSubjects = [
-            { subjectName: 'Mathematics', subjectCode: 'MATH101', section: 'A' },
-            { subjectName: 'Physics', subjectCode: 'PHYS101', section: 'B' },
-            { subjectName: 'Computer Science', subjectCode: 'CS101', section: 'A' },
-            { subjectName: 'English', subjectCode: 'ENG101', section: 'C' },
-            { subjectName: 'Chemistry', subjectCode: 'CHEM101', section: 'B' },
-            { subjectName: 'Biology', subjectCode: 'BIO101', section: 'A' },
-            { subjectName: 'History', subjectCode: 'HIST101', section: 'C' },
-            { subjectName: 'Geography', subjectCode: 'GEO101', section: 'B' }
-        ];
-
-        // Room allocations
-        const classrooms = ['C001', 'C002', 'C003', 'C004', 'C005', 'C006', 'C007'];
-        const rooms = ['R201', 'R202', 'R203', 'R204', 'R205', 'R206', 'R207', 'R208', 'R209', 'R210'];
-
-        // Helper function to get a random room
-        function getRandomRoom() {
-            const allRooms = [...classrooms, ...rooms];
-            return allRooms[Math.floor(Math.random() * allRooms.length)];
-        }
-
-        // Store the sampleSubjects to localStorage for testing
-        localStorage.setItem('selectedSubjects', JSON.stringify(sampleSubjects));
-
-        // Retrieve selected subjects from localStorage
-        const selectedSubjects = JSON.parse(localStorage.getItem('selectedSubjects')) || [];
-        
-        // Check if the subjects are correctly retrieved
-        console.log("Selected Subjects:", selectedSubjects);
-
-        // Generate timetable rows for each day
-        days.forEach(day => {
-            const row = document.createElement('tr');
-            row.innerHTML = `<td>${day}</td>`;
-
-            // Randomly assign subjects to time slots
-            const timeSlots = selectedSubjects.sort(() => 0.5 - Math.random()).slice(0, 6);
-
-            timeSlots.forEach(slot => {
-                const randomRoom = getRandomRoom();
-                row.innerHTML += ` 
-                    <td>
-                        ${slot.subjectName} (${slot.subjectCode})<br>
-                        Section: ${slot.section}<br>
-                        Room: ${randomRoom}
-                    </td>`;
-            });
-
-            timetableBody.appendChild(row);
-        });
-    </script>
 </body>
 </html>

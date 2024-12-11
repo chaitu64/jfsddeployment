@@ -162,9 +162,6 @@ Student s = (Student) session.getAttribute("student");
         </div>
 
         <!-- Update Profile Button -->
-        <form action="updateProfile.jsp" method="get">
-            <button type="submit">Update Profile</button>
-        </form>
     </div>
 
 </body>

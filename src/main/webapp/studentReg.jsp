@@ -183,7 +183,7 @@
             <input type="email" name="email" id="email" required placeholder="Enter your email" aria-label="Email" />
 
             <label for="password">Enter Password</label>
-            <input type="password" name="password" id="password" required minlength="8" placeholder="At least 8 characters" aria-label="Password" />
+            <input type="password" name="password" id="password" required placeholder="At least 8 characters" aria-label="Password" />
 
             <label for="location">Enter Location</label>
             <input type="text" name="location" id="location" required placeholder="Enter your location" aria-label="Location" />
